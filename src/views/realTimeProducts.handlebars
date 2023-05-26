@@ -1,0 +1,36 @@
+<div>
+  <h1>Bienvenid@ <span id="span-nombre"></span> a dasein!</h1>
+
+  <h3>Listado de msgs:</h3>
+  <div id="div-msgs" style="border: 1px solid red;margin-bottom: 20px;">
+    Loading...
+  </div>
+  <h1>Crear producto</h1>
+  <form id="mi-formulario">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="description">Description</label>
+    <input type="text" id="description" name="description" required><br><br>
+
+    <label for="price">Price</label>
+    <input type="text" id="price" name="price" required><br><br>
+
+    <label for="thumbnail">Thumbnail</label>
+    <input type="text" id="thumbnail" name="thumbnail" required><br><br>
+
+    <label for="code">Code</label>
+    <input type="text" id="code" name="code" required><br><br>
+
+    <label for="stock">Stock</label>
+    <input type="text" id="stock" name="stock" required><br><br>
+    
+    <input type="submit" value="Enviar" onclick="enviarFormulario(event)">
+  </form>
+
+  {{!-- <input id="input-msg" type="text" value="" placeholder="Ingrese algo.." /> --}}
+
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/js/products-socket.js"></script>
