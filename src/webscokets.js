@@ -1,6 +1,6 @@
 import ProductManager from "../managers/productManager.js";
 const productManager = new ProductManager();
-
+app.use(express.static(__dirname + '/public'));
 
 module.exports = (io) => {
 io.on("connection", (socket) => {

@@ -9,7 +9,7 @@ routerViewProducts.get("/", async (req, res) => {
   try {
     const products = await productManager.getProducts(); // No está claro de dónde proviene la variable "limit". Asegúrate de definirla antes de usarla.
 
-    return res.render("home.handlebars", {
+    return res.render("home", {
       titulo: "TITULO: PRODUCTOS",
       products: products,
     });
